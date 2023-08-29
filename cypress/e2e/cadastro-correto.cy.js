@@ -4,7 +4,7 @@ describe('Pagina de cadastro', () => {
     cy.contains('a','Register now').click();
     cy.get('[data-test="email"]').type('davi@hotmail.com');
     cy.get('[data-test="fullName"]').type('davi nicollas');
-    cy.get('[data-test="registerUserName"]').type('davinicollas');
+    cy.get('[data-test="registerUserName"]').type('carowl');
     cy.get('[data-test="registerPassword"]').type('12345678');
     cy.contains('button','Register').click();
 
