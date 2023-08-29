@@ -14,7 +14,7 @@ describe('Página de login', () => {
       });
 
       it('Preencher os campos de login corretamente para realizar login', () => {
-        cy.login('davinicollas', '12345678');
+        cy.loginIncorreto('davinicollas', '12345678');
         cy.wait('@stubPost')
 
       });

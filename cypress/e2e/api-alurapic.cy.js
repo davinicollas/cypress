@@ -13,6 +13,8 @@ describe('Api Alurapic', () => {
   })*/
 
   it('Fotos usuarios', () => {    
+
+    const tempoEsperado = Math.random() * 50;
     cy.request({
       method: 'GET',
       url: 'http://localhost:3000/davinicollas/photos'
@@ -21,6 +23,7 @@ describe('Api Alurapic', () => {
       expect(res.body).is.not.empty
       expect(res.body[0]).to.have.property('description')
       expect(res.body[0].description).to.be.equal('')
+      expect(res.duration).to.be.lte(tempoEsperado);
     })
   })
 })
